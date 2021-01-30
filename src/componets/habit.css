@@ -1,0 +1,17 @@
+.habit {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
+}
+
+.habit_count{
+  border-radius: 50%;
+  background-color: #008000;
+}
+
+.habit_name,
+.habit_count,
+.habit_btn {
+  padding: 0.2em;
+  font-size: 1em;
+}
