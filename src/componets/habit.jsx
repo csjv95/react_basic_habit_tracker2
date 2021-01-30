@@ -23,12 +23,13 @@ class Habit extends Component {
   delete = ()=> {
     console.log('delete');
   }
-  
   render() {
+    const {name , count} = this.props.habit;
+
     return (
       <li className='habit'>
-        <span className='habit_name'>habit</span>
-        <span className='habit_count'>{this.state.count}</span>
+        <span className='habit_name'>{name}</span>
+        <span className='habit_count'>{count}</span>
         <button className='habit_btn habit_increase' onClick={this.increment}>
           <i className="fas fa-plus"></i>
         </button>
