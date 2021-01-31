@@ -3,16 +3,17 @@ import "./habit.css";
 
 class Habit extends Component {
   increment = () => {
-    return this.props.handleIncrement(this.props.habit);
+    this.props.handleIncrement(this.props.habit);
   };
 
   decrement = () => {
-    console.log("decrement");
+    this.props.handleDecrement(this.props.habit);
   };
 
   delete = () => {
-    console.log("delete");
+    this.props.handleDelete(this.props.habit);
   };
+
   render() {
     const { name, count } = this.props.habit;
 
