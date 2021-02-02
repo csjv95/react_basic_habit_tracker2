@@ -1,6 +1,7 @@
 import Nav from "./componets/nav/nav";
 import Input from "./componets/input/input";
 import Habits from "./componets/habits";
+import Reset from "./componets/reset/reset";
 import "./app.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Nav />
       <Input />
       <Habits />
+      <Reset />
     </main>
   );
 }
