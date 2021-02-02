@@ -1,9 +1,13 @@
 import Habits from "./componets/habits";
-import './app.css';
+import "./app.css";
+import Nav from "./componets/nav/nav";
 
 function App() {
   return (
-    <Habits />
+    <main>
+      <Nav />
+      <Habits />
+    </main>
   );
 }
 
