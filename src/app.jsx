@@ -37,11 +37,11 @@ class App extends Component {
     const habits = this.state.habits.filter((item) => item.id !== habit.id);
     this.setState({ habits: habits });
   };
-
+  
   render() {
     return (
       <main>
-        <Nav />
+        <Nav count={this.state.habits.filter(habit => habit.count > 0).length}/>
         <Input />
         <Habits
           habits={this.state.habits}
