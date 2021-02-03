@@ -1,4 +1,4 @@
-const Reset = () => {
-  return <button>RESET</button>;
+const Reset = (props) => {
+  return <button onClick={props.handleReset}>RESET COUNT</button>;
 }
 export default Reset
