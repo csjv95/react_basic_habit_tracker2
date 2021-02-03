@@ -8,14 +8,22 @@ class Input extends Component {
     }
   }
 
+  onSubmit = (event) => {
+    event.preventDefault();
+    const name = this.state.value;
+    name &&  this.props.onAdd(name);
+    this.setState({value : ''});  // input 초기화
+  }
+
   onChange = (event) => {
     this.setState({value : event.target.value})
   }
   
   render() {
     return (
-      <form>
+      <form onSubmit={this.onSubmit}>
         <input type="text" value={this.state.value} onChange={this.onChange}/>
+        <button>Add</button>
       </form>
     );
   }

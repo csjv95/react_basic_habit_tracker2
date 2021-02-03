@@ -38,11 +38,16 @@ class App extends Component {
     this.setState({ habits: habits });
   };
 
+  handleAdd = (name) => {
+    const habits = [...this.state.habits, {id : Date.now(), name : name, count : 0}];
+    this.setState({habits : habits})
+  }
+
   render() {
     return (
       <main>
         <Nav count={this.state.habits.filter(item => item.count > 0).length}/>
-        <Input />
+        <Input onAdd={this.handleAdd}/>
         <Habits
           habits={this.state.habits}
           handleIncrement={this.handleIncrement}
